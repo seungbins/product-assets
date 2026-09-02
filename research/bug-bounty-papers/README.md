@@ -5,6 +5,7 @@
 - **[annotated-bibliography.md](./annotated-bibliography.md)** — 검증된 논문 28편의 전체 목록. 경제성, 플랫폼 역학, 정책/인센티브 설계, 보안 효과 측정, 해커 행동/동기, 법률·정부 사례, 최신 AI 동향 7개 주제로 분류.
 - **[program-improvement-recommendations.md](./program-improvement-recommendations.md)** — 위 논문들을 종합해 도출한, 실제 버그바운티 프로그램 운영에 바로 적용 가능한 개선 권고안과 우선순위 체크리스트.
 - **[templates/](./templates/)** — 바로 채워 쓸 수 있는 스코프 문서, 보상 등급표, safe harbor 조항 초안. (모두 실제 게시 전 담당자 검토 필요)
+- **[ai-product-security-risks.md](./ai-product-security-risks.md)** — 이 제품군(AI 콘텐츠 생성 도구) 특화 보안 리스크 12개 카테고리. CVE·실제 사고 사례·Anthropic/OpenAI/Google의 실제 프로그램 구조 기반.
 
 ## 중요 — 자동 적용 아님
 
