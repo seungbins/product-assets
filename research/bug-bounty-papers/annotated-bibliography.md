@@ -1,8 +1,6 @@
 # 버그바운티(Bug Bounty) 연구 논문 주석 목록
 
-복수의 리서치 트랙(① 경제성/정책 ② 해커 행동·비교연구 ③ 법률·정책·최신동향 ④ 국내(한국어) 연구)을 통해 웹 검색·원문 확인(arXiv, USENIX, ACM DL, Oxford Academic, SSRN, KoreaScience, KCI, DBpia, ScienceON 등)으로 실존을 검증한 논문 **37편**입니다. 각 논문은 제목/저자/게재처/링크와 함께, 빠르게 훑어볼 수 있는 한글 핵심 요약, 그리고 원 조사 내용을 보존한 상세 요약(해외 논문은 영문, 국내 논문은 국문)을 담고 있습니다.
-
-> 블록체인/스마트컨트랙트 버그바운티(Immunefi, Code4rena 등) 연구는 조사 중 세션 사용량 제한으로 중단되어 아직 포함되지 않았습니다 — 추후 추가 예정.
+복수의 리서치 트랙(① 경제성/정책 ② 해커 행동·비교연구 ③ 법률·정책·최신동향 ④ 국내(한국어) 연구 ⑤ 블록체인/스마트컨트랙트)을 통해 웹 검색·원문 확인(arXiv, USENIX, ACM DL, Oxford Academic, SSRN, KoreaScience, KCI, DBpia, ScienceON, MDPI 등)으로 실존을 검증한 논문 **44편**입니다. 각 논문은 제목/저자/게재처/링크와 함께, 빠르게 훑어볼 수 있는 한글 핵심 요약, 그리고 원 조사 내용을 보존한 상세 요약(해외 논문은 영문, 국내 논문은 국문)을 담고 있습니다.
 
 > 실제 적용 가능한 액션 아이템은 [`program-improvement-recommendations.md`](./program-improvement-recommendations.md)에 별도로 정리했습니다.
 
@@ -18,6 +16,7 @@
 6. [법률·정책 & 정부/기관 사례연구](#6-법률정책--정부기관-사례연구)
 7. [기술 특화 & 최신 동향(AI)](#7-기술-특화--최신-동향ai)
 8. [국내(한국어) 연구](#8-국내한국어-연구)
+9. [블록체인 & 스마트컨트랙트](#9-블록체인--스마트컨트랙트)
 
 ---
 
@@ -489,9 +488,113 @@ RISS·KCI·DBpia·KoreaScience·ScienceON 원문 대조로 검증한 국내 논�
 
 ---
 
+## 9. 블록체인 & 스마트컨트랙트
+
+전통적인 웹/소프트웨어 버그바운티(HackerOne, Bugcrowd)와 구조·경제성이 다른 블록체인/DeFi 버그바운티(Immunefi, Code4rena 등) 연구입니다. WebSearch/WebFetch에 더해 페이월로 막힌 원문은 PDF 직접 추출로 대조 검증했습니다.
+
+### Predicting the Effectiveness of Blockchain Bug Bounty Programs
+**저자:** Ed Marcavage, Jake Mason, Chen Zhong (University of Tampa)
+**게재처:** 36th International FLAIRS Conference (FLAIRS-36), 2023
+**링크:** https://journals.flvc.org/FLAIRS/article/view/133377 (오픈액세스)
+
+**핵심 요약:** HackerOne·Bugcrowd·HackenProof·Immunefi에서 수집한 블록체인 버그바운티 프로그램 약 200개를 분석 — 보상액이 아니라 "정책 문서의 텍스트 구성"과 "스코프 내 Solidity 함수 종류·소스코드 공개 여부" 같은 기술적 스코핑 선택이 헌터 참여도를 유의미하게 좌우한다는 것을 회귀분석으로 입증. 블록체인 버그바운티의 "프로그램 설계 자체"를 통계적으로 모델링한 몇 안 되는 논문.
+
+<details><summary>영문 상세 요약</summary>
+
+Investigates what structural and textual features of a blockchain bug bounty program predict its ability to attract ethical-hacker participation — i.e., what makes a Web3 bounty program "effective" independent of reward size. The authors compiled a dataset of roughly 200 blockchain-related bug bounty programs sourced from HackerOne, Bugcrowd, HackenProof, and Immunefi. For each program they extracted features spanning program-description characteristics (length/wording of key policy sections such as scope and reward tables) and smart-contract-specific characteristics (which Solidity function types were in scope, and whether source code was made publicly viewable to researchers). These features were fed into regression models predicting program effectiveness at drawing hacker engagement. Key finding: both textual presentation of a bounty program and technical scoping choices (source-code visibility, in-scope function types) are significantly associated with how much hacker attention a blockchain bounty program attracts — actionable, addressable design levers distinct from simply raising payouts. Limitations: small sample (~200 programs), short conference-paper format rather than journal depth.
+</details>
+
+---
+
+### A Survey of Bug Bounty Programs in Strengthening Cybersecurity and Privacy in the Blockchain Industry
+**저자:** Junaid Arshad, Muhammad Talha, Bilal Saleem, Zoha Shah, Huzaifa Zaman (Air University), Zia Muhammad (North Dakota State University)
+**게재처:** *Blockchains* (MDPI), Vol. 2, Issue 3, pp. 195–216, 2024
+**링크:** https://www.mdpi.com/2813-5288/2/3/10 (오픈액세스, CC BY 4.0)
+
+**핵심 요약:** 블록체인 산업에 특화된 버그바운티 프로그램만 다룬 사실상 유일한 동료심사 서베이 논문. 플랫폼 기반 vs. 기업 자체 운영 프로그램을 비교분석해 각 모델의 장단점과 신뢰도를 정리하고, 트리아지 품질·보상 분쟁 등 구조적 과제와 향후 방향을 제시.
+
+<details><summary>영문 상세 요약</summary>
+
+A dedicated survey/SoK of bug bounty programs specifically in the blockchain industry, explicitly motivated by the authors' observation that "there remains a conspicuous absence of comprehensive research that explores this domain." The paper reviews the bug-bounty ecosystem broadly (citing precedents like "Hack the Pentagon") before narrowing to blockchain-specific platforms, comparing program structures, incentive design, vulnerability types typically surfaced, and the role of ethical hackers. It conducts a comparative analysis of platform-based vs. company-run programs to identify each model's advantages/disadvantages and credibility, closing with recommendations for addressing structural challenges (e.g., triage quality, payout disputes) and future directions.
+</details>
+
+---
+
+### Auditing Smart Contracts
+**저자:** Wayne R. Landsman (UNC), Evgeny Lyandres (Tel Aviv University), Edward L. Maydew (UNC), Daniel Rabetti (NUS), Che Zhang (Tsinghua University)
+**게재처:** SSRN 워킹페이퍼(2025년 10월 개정판), Journal of Accounting and Economics 심사 중으로 추정 — **아직 정식 동료심사 완료 전**
+**링크:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5198563
+
+**핵심 요약:** ⭐ 이번 조사에서 가장 직접적으로 관련된 논문. "중앙화 감사자"(고정 수수료, 출시 전 1회성 코드 리뷰)와 "탈중앙화 감사자"(=버그바운티 헌터, 출시 후 실운영 환경에서 지속적으로 심각도 기반 보상)를 명시적으로 구분해 경제적 효과를 비교. DeFi 프로토콜 수천 개 + 감사 리포트 약 1만 건 데이터로, 평균적으로는 감사가 향후 침해 가능성을 낮추지 않지만 **최상위 등급의 중앙화 감사와 탈중앙화(버그바운티) 감사는 둘 다 침해 가능성·손실 규모를 낮춘다**는 것을 발견. 침해 이후 개발팀은 상위 등급 감사자로 갈아타고 버그바운티 프로그램 쪽으로도 옮겨가는 경향.
+
+<details><summary>영문 상세 요약</summary>
+
+Explicitly frames and studies the exact economic distinction: "centralized auditors" (hired for a fixed fee, one-time pre-launch code review) versus "decentralized auditors," glossed as "bounty hunters" operating through bug bounty programs that run continuously post-launch and pay based on vulnerability severity. Using nearly 10,000 audit reports from 100+ firms/programs linked to thousands of DeFi protocols (Jan 2020–Jan 2025), the authors find: pre-launch audit adoption correlates with risk-exposed protocol designs; on average audits do not reduce future breach likelihood, but top-tier centralized *and* decentralized/bounty audits specifically are associated with lower breach likelihood and lower losses conditional on a breach; post-breach, developers upgrade to top-tier auditors and pivot toward bounty programs; breached auditors suffer only short-term reputational losses.
+</details>
+
+---
+
+### Decentralized Finance (DeFi) assurance: early evidence
+**저자:** Thomas Bourveau (Columbia), Janja Brendel, Jordan Schoenfeld
+**게재처:** Review of Accounting Studies, 29권 3호, pp. 2209–2253, 2024
+**링크:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4457936 (SSRN 오픈액세스 워킹페이퍼판)
+
+**핵심 요약:** 스마트컨트랙트 감사 리포트 약 8,500건을 수작업 코딩해 DeFi "어슈어런스" 시장의 등장을 문서화 — 기존 대형 회계법인이 아니라 신생 "기술 감사 전문 업체"가 시장을 장악하고 있고, 감사 리포트 공개가 자본시장에 실제로 긍정적 반응을 일으킴을 입증. **주의:** 버그바운티 vs. 전통 감사를 날카롭게 구분하진 않는, 스마트컨트랙트 감사 시장 전반에 대한 기초 연구.
+
+<details><summary>영문 상세 요약</summary>
+
+Using a hand-coded sample of ~8,500 smart-contract audit reports, this paper documents the emergence of a voluntary "assurance" market for DeFi: audits are pervasive; the auditor market is dominated by new, non-traditional "technical audit firms" rather than incumbent (Big-4-style) financial auditors; audit scope varies widely; and capital markets react positively to report releases. This paper is about the broader voluntary smart-contract-audit-report market as a whole and is not centered on the bug-bounty-vs-traditional-audit distinction specifically — included as foundational background, frequently cited by the more bounty-specific papers above.
+</details>
+
+---
+
+### Auditing Decentralized Finance
+**저자:** Siddharth Bhambhwani, Allen H. Huang (HKUST)
+**게재처:** British Accounting Review, 2024
+**링크:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4613529
+
+**핵심 요약:** DeFi 프로토콜 316개 분석 — 감사 수·감사 품질이 높을수록 TVL(예치자산)과 토큰 시가총액이 높고, 첫 감사 이후 TVL·토큰가치가 유의미하게 상승하며, 감사 품질이 좋을수록 TerraUSD 붕괴 같은 충격에도 더 견고했음을 발견. **주의:** 버그바운티/탈중앙화 감사자를 별도로 다루지 않음 — 중앙화 감사 자체의 시그널링 가치에 초점.
+
+<details><summary>영문 상세 요약</summary>
+
+Provides what the authors describe as the first empirical evidence on DeFi smart-contract audit services' effect on protocol outcomes. Using data on 316 of the largest DeFi protocols, the study finds protocols vetted by more auditors and higher-quality auditors have higher TVL and higher token market capitalization; an event-study around each protocol's first audit shows TVL and token value increase significantly afterward; better-audited protocols showed more resilience after the TerraUSD collapse shock. Repeated searches turned up no evidence this paper specifically discusses bug bounty programs as a distinct category — included as directly relevant background, not a bug-bounty-specific study.
+</details>
+
+---
+
+### The Role of Auditor Reputation in an Emerging Audit Marketplace: Evidence from Decentralized Finance (DeFi)
+**저자:** W. Robert Knechel (University of Florida), Steven A. Maex (George Mason University), Hyun Jong Park
+**게재처:** Management Science, 2025 (Forthcoming — 3개 독립 출처로 실재 확인)
+**링크:** https://pubsonline.informs.org/doi/10.1287/mnsc.2023.02245
+
+**핵심 요약:** ⚠️ 존재·저자·venue는 3개 출처로 교차확인했으나, SSRN·INFORMS 모두 직접 접근이 막혀 원문 초록을 확보하지 못했습니다. 구체적 연구 결과는 다른 논문 요약과 섞여 오염될 위험이 있어 **의도적으로 기재하지 않습니다** — 인용 전 SSRN/INFORMS에서 직접 초록을 확인하세요. (규제 감독이 없는 DeFi 감사 시장에서 "평판"이 품질 신호로 작용하는 방식을 다루는 논문이라는 주제만 확인됨.)
+
+---
+
+### Decentralized Attack Search and the Design of Bug Bounty Schemes
+**저자:** Hans Gersbach, Akaki Mamageishvili, Fikri Pitsuwan (ETH Zurich)
+**게재처:** 16th International Symposium on Algorithmic Game Theory (SAGT 2023), Springer LNCS (arXiv:2304.00077)
+**링크:** https://arxiv.org/abs/2304.00077 (오픈액세스)
+
+**핵심 요약:** 버그바운티를 게임이론적 콘테스트 모델로 정식화 — 탐색비용이 서로 다른 참가자 집단의 균형 탐색 행동을 도출하고, 최적 그룹 크기·전담 전문가 추가 고용 시점·"의도적으로 가짜 버그를 심어 프로그램 무결성을 검증하는" 기법·단일 보상 대신 등급별 다중 보상 구조 설계 등을 분석. 블록체인/인프라 보안을 명시적 동기로 제시하며 Arbitrum 리서치 포럼에도 게시됨 — 다만 모델 자체는 범용적(스마트컨트랙트 전용 아님).
+
+<details><summary>영문 상세 요약</summary>
+
+A game-theoretic/mechanism-design paper building "a simple contest model of bug bounty" in which a group of individuals with heterogeneous search costs is invited to hunt for vulnerabilities in exchange for rewards. The authors characterize equilibrium search behavior and derive an optimal scheme design across several levers: optimal group size, whether/when to additionally hire dedicated experts, inserting "artificial bugs" to calibrate incentives and verify program integrity, and structuring multiple/tiered prizes rather than a single payout. The paper's motivating framing is explicitly infrastructure- and blockchain-security-oriented, and it was subsequently posted to the Arbitrum Research forum. The formal model itself is general-purpose (applicable to any bug bounty context), offered as the strongest available treatment of incentive mechanism design for bug bounty schemes with explicit blockchain motivation.
+</details>
+
+---
+
+> **문헌 공백 (정직하게 기록):** "감사 콘테스트"(Code4rena/Sherlock식 시간제한 경쟁형 감사)를 지속형 버그바운티와 구분해서 그 경제성·효과성을 독자적으로 연구한 학술 논문은 이번 조사에서 **찾지 못했습니다** — 관련 자료는 Sherlock/Code4rena 자체 블로그, Medium 포스트, 커뮤니티 위키뿐이었습니다. 블록체인 버그바운티 헌터의 동기부여를 다룬 독립 학술 연구도 없었습니다(Immunefi의 자체 "Hacker Ecosystem Survey"는 업계 설문이라 미포함). 억지로 약한 매칭을 채우지 않고 공백으로 남깁니다.
+>
+> **제외된 논문(실재하지만 주제 불일치):** 블록체인을 버그바운티 프로그램의 "구현 인프라"로 제안하는 시스템 논문(Badash et al., ACM SAC 2021), SGX 기반 버그 증명 플랫폼 논문(Fukuchi et al., IEEE ICBC 2024), LLM vs 수동 감사 벤치마크(David et al., arXiv:2306.12338), DeFi 공격 SoK(Zhou et al., IEEE S&P 2023 — 버그바운티를 실질적으로 다루지 않음 확인), Code4rena 리포트를 취약점 분류 데이터셋으로만 활용한 논문들 — 전부 실존은 확인했으나 "버그바운티 메커니즘 자체의 경제성/효과성"이라는 기준에 맞지 않아 제외.
+
+---
+
 ## 조사 방법 메모
 
 - 1차 라운드: 3개 병렬 리서치 트랙(경제성/정책, 해커 행동/비교연구, 법률/정책/최신동향)이 각각 WebSearch + WebFetch로 원문 게재처(USENIX, ACM DL, Oxford Academic, arXiv, SSRN 등)를 직접 확인 → 28편.
-- 2차 라운드: 국내(한국어) 연구 트랙을 RISS/KCI/DBpia/KoreaScience/ScienceON 기준으로 추가 조사 → 9편 추가, 총 37편. 같은 2차 라운드에서 진행한 블록체인/스마트컨트랙트 버그바운티(Immunefi, Code4rena 등) 조사는 세션 사용량 제한(rate limit)으로 중단되어 아직 없음 — 재시도 예정.
+- 2차 라운드: 국내(한국어) 연구 트랙을 RISS/KCI/DBpia/KoreaScience/ScienceON 기준으로 추가 조사 → 9편 추가(총 37편). 같은 2차 라운드에서 시도한 블록체인/스마트컨트랙트 트랙은 세션 사용량 제한으로 중단되어 재시도.
+- 3차 라운드(재시도): 블록체인/스마트컨트랙트 버그바운티(Immunefi, Code4rena 등) 트랙 완료 → 7편 추가(총 44편). "감사 콘테스트 모델 자체를 다루는 독립 학술 연구는 존재하지 않는다"는 문헌 공백도 함께 확인·기록.
 - 검증 실패했거나 동료심사 상태가 불확실한 논문(예: 일부 블로그 포스트, 포스터 논문, 미확인 학위논문)은 제외했으며, 프리프린트는 본문에 명시적으로 표기함. 국내 연구 조사에서는 1차 출처로 대조되지 않은 4건을 "인용 금지 권장"으로 별도 표시(8장 하단 참고).
 - 원 조사에서 저자가 제시한 게재처 정보 중 일부(Kuehn & Mueller의 경우 WEIS→TPRC, Zhao/Laszka/Grossklags의 경우 WEIS→Journal of Information Policy, Walshe & Simpson 2022의 경우 IEEE→Computers & Security)는 교차검증 과정에서 정정됨.
