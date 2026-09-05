@@ -2,7 +2,7 @@
 
 버그바운티 프로그램에 관한 학술 논문을 조사·정리한 자료입니다.
 
-- **[annotated-bibliography.md](./annotated-bibliography.md)** — 검증된 논문 44편의 전체 목록. 경제성, 플랫폼 역학, 정책/인센티브 설계, 보안 효과 측정, 해커 행동/동기, 법률·정부 사례, 최신 AI 동향, 국내(한국어) 연구, 블록체인/스마트컨트랙트 9개 주제로 분류.
+- **[annotated-bibliography.md](./annotated-bibliography.md)** — 검증된 논문 48편의 전체 목록. 경제성, 플랫폼 역학, 정책/인센티브 설계, 보안 효과 측정, 해커 행동/동기, 법률·정부 사례, 최신 AI 동향, 국내(한국어) 연구, 블록체인/스마트컨트랙트, 산업별 특화·전체 분야 개관 10개 주제로 분류.
 - **[program-improvement-recommendations.md](./program-improvement-recommendations.md)** — 위 논문들을 종합해 도출한, 실제 버그바운티 프로그램 운영에 바로 적용 가능한 개선 권고안과 우선순위 체크리스트.
 - **[templates/](./templates/)** — 바로 채워 쓸 수 있는 스코프 문서, 보상 등급표, safe harbor 조항 초안. (모두 실제 게시 전 담당자 검토 필요)
 - **[ai-product-security-risks.md](./ai-product-security-risks.md)** — 이 제품군(AI 콘텐츠 생성 도구) 특화 보안 리스크 12개 카테고리. CVE·실제 사고 사례·Anthropic/OpenAI/Google의 실제 프로그램 구조 기반.
@@ -15,10 +15,10 @@
 
 | 항목 | 내용 |
 |---|---|
-| 검증된 논문 수 | 44편 (2013–2026, 프리프린트/워킹페이퍼 4편·국내 연구 9편·블록체인 7편 포함) |
-| 조사 방법 | 5개 트랙 조사(경제성/정책, 해커 행동/비교연구, 법률/정책/최신동향, 국내(한국어) 연구, 블록체인/스마트컨트랙트) 후 중복 제거·교차검증 |
-| 검증 절차 | WebSearch로 탐색 후 원문 게재처(USENIX, ACM DL, Oxford Academic, arXiv, SSRN, KCI, DBpia, KoreaScience, MDPI 등)를 WebFetch/PDF 직접 확인 |
-| 문헌 공백 | "감사 콘테스트"(Code4rena/Sherlock식 시간제한 경쟁형 감사) 자체를 다루는 독립 학술 연구는 조사 결과 존재하지 않음 — 억지로 채우지 않고 공백으로 기록 |
+| 검증된 논문 수 | 48편 (2013–2026, 프리프린트/워킹페이퍼 4편·국내 연구 9편·블록체인 7편·산업별 특화 4편 포함) |
+| 조사 방법 | 6개 트랙 조사(경제성/정책, 해커 행동/비교연구, 법률/정책/최신동향, 국내(한국어) 연구, 블록체인/스마트컨트랙트, 산업별·전체 분야 개관) 후 중복 제거·교차검증 |
+| 검증 절차 | WebSearch로 탐색 후 원문 게재처(USENIX, ACM DL, Oxford Academic, arXiv, SSRN, KCI, DBpia, KoreaScience, MDPI, Semantic Scholar 등)를 WebFetch/PDF 직접 확인 |
+| 문헌 공백 | "감사 콘테스트"(Code4rena/Sherlock식), 의료기기, 항공/우주 분야는 버그바운티를 전용 주제로 다룬 학술 연구가 조사 결과 존재하지 않음 — 억지로 채우지 않고 공백으로 기록 |
 | 주요 발견 | 스코프 명확성과 트리아지 커뮤니케이션이 보상액보다 참여·품질에 더 큰 영향. 버그바운티는 사내 보안 투자의 대체재가 아닌 보완재로 설계해야 함 (모럴 해저드 위험). |
 
 ## 참고 — "학습"의 의미

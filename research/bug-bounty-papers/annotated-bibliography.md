@@ -1,6 +1,6 @@
 # 버그바운티(Bug Bounty) 연구 논문 주석 목록
 
-복수의 리서치 트랙(① 경제성/정책 ② 해커 행동·비교연구 ③ 법률·정책·최신동향 ④ 국내(한국어) 연구 ⑤ 블록체인/스마트컨트랙트)을 통해 웹 검색·원문 확인(arXiv, USENIX, ACM DL, Oxford Academic, SSRN, KoreaScience, KCI, DBpia, ScienceON, MDPI 등)으로 실존을 검증한 논문 **44편**입니다. 각 논문은 제목/저자/게재처/링크와 함께, 빠르게 훑어볼 수 있는 한글 핵심 요약, 그리고 원 조사 내용을 보존한 상세 요약(해외 논문은 영문, 국내 논문은 국문)을 담고 있습니다.
+복수의 리서치 트랙(① 경제성/정책 ② 해커 행동·비교연구 ③ 법률·정책·최신동향 ④ 국내(한국어) 연구 ⑤ 블록체인/스마트컨트랙트 ⑥ 산업별 특화·전체 분야 개관)을 통해 웹 검색·원문 확인(arXiv, USENIX, ACM DL, Oxford Academic, SSRN, KoreaScience, KCI, DBpia, ScienceON, MDPI, Semantic Scholar, DBLP 등)으로 실존을 검증한 논문 **48편**입니다. 각 논문은 제목/저자/게재처/링크와 함께, 빠르게 훑어볼 수 있는 한글 핵심 요약, 그리고 원 조사 내용을 보존한 상세 요약(해외 논문은 영문, 국내 논문은 국문)을 담고 있습니다.
 
 > 실제 적용 가능한 액션 아이템은 [`program-improvement-recommendations.md`](./program-improvement-recommendations.md)에 별도로 정리했습니다.
 
@@ -17,6 +17,7 @@
 7. [기술 특화 & 최신 동향(AI)](#7-기술-특화--최신-동향ai)
 8. [국내(한국어) 연구](#8-국내한국어-연구)
 9. [블록체인 & 스마트컨트랙트](#9-블록체인--스마트컨트랙트)
+10. [산업별 특화 연구 & 전체 분야 개관](#10-산업별-특화-연구--전체-분야-개관)
 
 ---
 
@@ -591,10 +592,77 @@ A game-theoretic/mechanism-design paper building "a simple contest model of bug 
 
 ---
 
+## 10. 산업별 특화 연구 & 전체 분야 개관
+
+"버그바운티 연구 전체를 다룬 단 하나의 SoK 논문이 있는가?"라는 점검과, 웹/소프트웨어를 넘어선 산업별(IoT·자동차·의료기기·항공·투표시스템) 버그바운티 연구를 조사한 결과입니다.
+
+### What We Know About Bug Bounty Programs: An Exploratory Systematic Mapping Study
+**저자:** Ana Magazinius, Niklas Mellegård, Linda Olsson (RISE, 스웨덴)
+**게재처:** STAST 2019(ESORICS 2019 부속 워크숍), Springer LNCS vol. 11739, 2021. (축약판: IEEE SEAA 2019)
+**링크:** https://doi.org/10.1007/978-3-030-55958-8_5
+
+**핵심 요약:** 🗺️ "버그바운티 연구 전체를 다룬 SoK가 있는가"에 대한 가장 가까운 답 — 다만 자칭 SoK는 아니고 **체계적 매핑 스터디(systematic mapping study)**. Scopus·IEEE Xplore·ACM DL·Google Scholar에서 2,457건을 검색해 72편으로 좁혀 분류. 기업(프로그램 운영자) 관점 연구(설계·거버넌스·경제성)에 편중되어 있고, 헌터의 동기·관행이나 취약점 시장 가격결정 연구는 비교적 얇고 여러 분야(SW공학·보안·경제학·HCI)에 흩어져 있다고 진단. **2019~2021년 이후로 이를 대체하는 최신(2022~2025) 전체-분야 리뷰는 존재하지 않음.**
+
+<details><summary>영문 상세 요약</summary>
+
+The study asks what the academic literature actually says about bug bounty programs (BBPs) as a socio-technical phenomenon, across three lenses: the product owner/organizing firm, the "hunting crowd," and the vulnerability market. Using a systematic mapping-study protocol, the authors searched Scopus, IEEE Xplore, ACM Digital Library, and Google Scholar, retrieving 2,457 candidate items and narrowing these to 72 primary studies for classification. They find the literature is heavily skewed toward the product-owner perspective — program design, scoping, governance, and economics from the firm's side — while research on hunters' motivations/practices and on vulnerability-market pricing mechanisms is comparatively thin and fragmented across software engineering, security, economics, and HCI venues. Descriptive/taxonomic rather than a meta-analysis with pooled effect sizes, but exactly the kind of field-wide orientation map this bibliography was checking for.
+</details>
+
+---
+
+### Ethical Hacking for IoT Security: A First Look into Bug Bounty Programs and Responsible Disclosure
+**저자:** Aaron Yi Ding, Gianluca Limon De Jesus, Marijn Janssen (TU Delft)
+**게재처:** ACM ICTRS 2019, pp. 49–55 (arXiv:1909.11166 — 동일 논문, 동료심사 확인됨)
+**링크:** https://arxiv.org/abs/1909.11166 (오픈액세스)
+
+**핵심 요약:** IoT 특유의 제약(기기 다양성, 패치 어려움, 긴 공급망, 긴 기기 수명, 보안 책임 주체 불명확)에서 버그바운티·조정형 공개(RD)가 실제로 도움이 되는지 문헌조사+전문가 인터뷰로 분석. **핵심 결론: 버그바운티는 기초 보안 엔지니어링을 대체할 수 없고 그 위에 얹는 한 겹일 뿐** — 먼저 내부에서 손쉬운 문제를 잡고 나서 공개 프로그램을 열어야 한다는 실무 거버넌스 권고.
+
+<details><summary>영문 상세 요약</summary>
+
+The paper asks whether crowdsourced ethical hacking — bug bounty programs (BBPs) and coordinated/responsible disclosure (RD) — can meaningfully improve IoT vulnerability management, given IoT's distinctive constraints. Using a qualitative approach combining a literature survey with expert interviews, the authors map how BBP/RD mechanisms fit the practical tasks of identifying, classifying, prioritizing, and remediating IoT vulnerabilities. Central finding: crowdsourced approaches are valuable but only as one layer of a multi-layered security strategy — companies should first perform baseline security engineering internally, and only then open a public program. Closes with governance recommendations for IoT vendors, regulators, and consumers.
+</details>
+
+---
+
+### Automotive Vulnerability Disclosure: Stakeholders, Opportunities, Challenges
+**저자:** Robin Bolz, Reiner Kriesten
+**게재처:** Journal of Cybersecurity and Privacy (MDPI), Vol. 1, Issue 2, pp. 274–288, 2021
+**링크:** https://www.mdpi.com/2624-800X/1/2/15 (오픈액세스)
+
+**핵심 요약:** 자동차 산업의 버그바운티는 2015년 지프 체로키 해킹(Miller/Valasek) 사건 직후 Fiat Chrysler가 업계 최초로 프로그램을 연 것에서 출발. 차량 수명이 길고 안전 최우선이며 OEM-공급사 다단계 구조라는 IT와 다른 제약을 짚고, 수년이 지난 지금도 자동차 업계의 취약점 공개·버그바운티 수준은 일반 IT 대비 여전히 미성숙하다고 진단, OEM·공급사·독립연구자·규제기관별 역할과 요건을 제안.
+
+<details><summary>영문 상세 요약</summary>
+
+The paper examines what the automotive sector can learn from IT's established vulnerability-disclosure norms, given the industry's distinct constraints: long vehicle lifecycles, safety-criticality, tiered OEM/supplier chains, and limited over-the-air patchability. It traces automotive bug bounty programs to 2015 (the Jeep Cherokee hack), when Fiat Chrysler launched one of the industry's first such programs. Methodologically a qualitative/conceptual analysis of stakeholders and disclosure processes. Key finding: despite several years of adoption, both the quantity and quality of automotive vulnerability-disclosure and bug-bounty measures remain immature relative to general IT practice; the authors propose requirements and role responsibilities for OEMs, suppliers, independent researchers, and regulators.
+</details>
+
+---
+
+### The Swiss Post/Scytl Transparency Exercise and Its Possible Impact on Internet Voting Regulation
+**저자:** Ardita Driza Maurer (Centre for Democracy Studies Aarau, 취리히대학교)
+**게재처:** E-Vote-ID 2019, Springer LNCS vol. 11759, pp. 83–99
+**링크:** http://www.electoralpractice.ch/wp-content/uploads/2019/10/2019-EVotID-Springer-ArditaDrizaMaurer.pdf (오픈액세스)
+
+**핵심 요약:** 스위스 우체국의 인터넷투표 시스템(Swiss Post/Scytl)에 대해 2019년 실시한 "공개 침투 테스트"(CHF 25만 기금, 소스코드 동시 공개, 137개국 참가자 약 3,200명 참여)를 논문이 직접 "버그바운티" 형태라고 규정하며 분석. **결정적 취약점(암호학적 "트랩도어")은 침투 테스트가 아니라 소스코드 리뷰로 발견됐다는 점을 지적** — "버그바운티" 프레이밍이 크라우드소스 테스트의 실제 효과를 과대포장할 수 있음을 시사. 이 사건으로 스위스 우체국은 인터넷투표를 중단, 정부는 전국 도입을 연기.
+
+<details><summary>영문 상세 요약</summary>
+
+Analyzes Switzerland's February–March 2019 "public intrusion test" (PIT) of the Swiss Post/Scytl e-voting system — an event the paper explicitly describes as taking "the form of a 'bug bounty,'" backed by a CHF 250,000 fund, run in parallel with mandatory source-code publication. The research question is regulatory/policy: what does this exercise reveal about the adequacy of Switzerland's certification framework for internet voting? Around 3,200 participants from 137 countries took part in the PIT, but critically, the most severe vulnerabilities were found through source-code review, not the bounty-style intrusion test — the paper uses this to question whether "bug bounty" framing oversells what crowdsourced testing alone can catch. The episode led Swiss Post to suspend e-voting, and the federal government to delay normalizing internet voting nationally.
+</details>
+
+---
+
+> **문헌 공백 (정직하게 기록):** **의료기기**와 **항공/우주** 분야는 버그바운티 프로그램을 전용 주제로 다룬 학술 논문을 찾지 못했습니다 — 검색 실패가 아니라 실제 공백으로 보입니다. 의료기기 쪽은 취약점 공개·CVD 정책 일반을 다룬 문헌은 있지만(예: Williams & Woodward 2015), 버그바운티라는 크라우드소싱 메커니즘 자체를 연구한 논문은 없었고, 업계 문헌(MDIC, ISACA)도 "버그바운티가 SW 업계에서는 흔하지만 의료기기 업계에서는 아직 기대되는 수준이 아니다"라고 명시. 항공 쪽은 "Hack the Air Force"에 대한 언론 보도는 많지만 학술 연구는 없었고, 있는 건 국방부(Pentagon) 전반을 다룬 사례연구(이미 6장에 포함됨)뿐.
+>
+> **제외된 논문(품질 미달):** "Bug Bounty Programs: A Comprehensive Meta-Analytical Review of Strategies, Challenges, and Future Directions" (IRJAEH, 2025)는 제목상 정확히 필요한 논문처럼 보였으나, 게재지가 Scopus/WoS 미색인 2023년 신설 저널이고 해당 저널 논문 약 900편 중 96%가 인용 0회로 확인되어 동료심사 신뢰도를 인정하기 어려워 제외.
+
+---
+
 ## 조사 방법 메모
 
 - 1차 라운드: 3개 병렬 리서치 트랙(경제성/정책, 해커 행동/비교연구, 법률/정책/최신동향)이 각각 WebSearch + WebFetch로 원문 게재처(USENIX, ACM DL, Oxford Academic, arXiv, SSRN 등)를 직접 확인 → 28편.
 - 2차 라운드: 국내(한국어) 연구 트랙을 RISS/KCI/DBpia/KoreaScience/ScienceON 기준으로 추가 조사 → 9편 추가(총 37편). 같은 2차 라운드에서 시도한 블록체인/스마트컨트랙트 트랙은 세션 사용량 제한으로 중단되어 재시도.
 - 3차 라운드(재시도): 블록체인/스마트컨트랙트 버그바운티(Immunefi, Code4rena 등) 트랙 완료 → 7편 추가(총 44편). "감사 콘테스트 모델 자체를 다루는 독립 학술 연구는 존재하지 않는다"는 문헌 공백도 함께 확인·기록.
+- 4차 라운드: 전체 분야 SoK/서베이 유무 점검 + 산업별(IoT·자동차·의료기기·항공·투표시스템) 특화 연구 조사 → 4편 추가(총 48편). 의료기기·항공 분야는 학술 문헌 자체가 없다는 공백을 확인했고, 품질 미검증 저널 논문 1건은 인용 대상에서 제외.
 - 검증 실패했거나 동료심사 상태가 불확실한 논문(예: 일부 블로그 포스트, 포스터 논문, 미확인 학위논문)은 제외했으며, 프리프린트는 본문에 명시적으로 표기함. 국내 연구 조사에서는 1차 출처로 대조되지 않은 4건을 "인용 금지 권장"으로 별도 표시(8장 하단 참고).
 - 원 조사에서 저자가 제시한 게재처 정보 중 일부(Kuehn & Mueller의 경우 WEIS→TPRC, Zhao/Laszka/Grossklags의 경우 WEIS→Journal of Information Policy, Walshe & Simpson 2022의 경우 IEEE→Computers & Security)는 교차검증 과정에서 정정됨.
